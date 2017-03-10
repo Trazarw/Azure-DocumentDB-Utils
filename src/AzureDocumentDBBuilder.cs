@@ -9,6 +9,7 @@ public interface IAzureDocumentDBBuilder
 {
     IReliableReadWriteDocumentClient GetIReliableReadWriteDocumentClient(string endpoint, string auth, ConnectionPolicy connPolicy = null, DocumentDbRetryStrategy retryStrategy = null);
     Database GetDatabase(IReliableReadWriteDocumentClient client, string databaseId, bool createIfNotExist);
+    object RandomMethod(object randomArgument);
 }
 
 public class AzureDocumentDBBuilder : IAzureDocumentDBBuilder
